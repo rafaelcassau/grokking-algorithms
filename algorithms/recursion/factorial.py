@@ -20,8 +20,7 @@ f(n=5, * f(4)) = 120
 def factorial(n):
     if n == 1:
         return 1
-    return n * factorial(n -1)
-
+    return n * factorial(n - 1)
 
 
 assert factorial(1) == 1
