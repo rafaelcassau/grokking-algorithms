@@ -27,9 +27,9 @@ def recursive_sum(array):
     return result + recursive_sum(array)
 
 
-assert sum([]) == 0
-assert sum([1]) == 1
-assert sum([1, 2]) == 3
-assert sum([1, 2, 3]) == 6
-assert sum([1, 2, 3, 4]) == 10
-assert sum([1, 2, 3, 4, 5]) == 15
+assert recursive_sum([]) == 0
+assert recursive_sum([1]) == 1
+assert recursive_sum([1, 2]) == 3
+assert recursive_sum([1, 2, 3]) == 6
+assert recursive_sum([1, 2, 3, 4]) == 10
+assert recursive_sum([1, 2, 3, 4, 5]) == 15
