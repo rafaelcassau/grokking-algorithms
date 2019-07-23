@@ -11,7 +11,7 @@ f(array=[5])
 Base case
 f(array=[])
 
-Base pop
+Stack pop
 f(array=[5]) = 1
 f(array=[4, 5]) = 2
 f(array=[3, 4, 5]) = 3
