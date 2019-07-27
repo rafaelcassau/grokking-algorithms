@@ -10,7 +10,8 @@ O(log N) is the size of the stack with the amount of recursive calls
 
 In this case the pivot position matters to reach a good performance.
 
-Quicksort and Mergesort has the same asymtotic complexity, but when the complexity is equivalent, the constant C 'time' is important to consider the better performance, and in this context the constant C in Quicksort is more faster than the same constant in Mergesort.
+Quicksort and Mergesort has the same asymtotic complexity, but when the complexity is equivalent, the constant C 'time'
+is important to consider the better performance, and in this context the constant C in Quicksort is more faster than the same constant in Mergesort.
 """
 
 
