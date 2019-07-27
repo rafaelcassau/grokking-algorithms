@@ -1,5 +1,6 @@
 """
-Quick sort is a sortable algorithm that use divide by conquer strategy by calling itself until each part of array become less than 2 elements
+Quick sort is a sortable algorithm that use divide by conquer strategy by calling itself until each part of array become
+less than 2 elements
 
 Best case O(N log N)
 Average case O(N log N)
@@ -11,7 +12,8 @@ O(log N) is the size of the stack with the amount of recursive calls
 In this case the pivot position matters to reach a good performance.
 
 Quicksort and Mergesort has the same asymtotic complexity, but when the complexity is equivalent, the constant C 'time'
-is important to consider the better performance, and in this context the constant C in Quicksort is more faster than the same constant in Mergesort.
+is important to consider the better performance, and in this context the constant C in Quicksort is more faster than the
+same constant in Mergesort.
 """
 
 
