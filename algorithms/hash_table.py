@@ -1,5 +1,32 @@
 """
+Hash tables are a powerful data structure because they are very fast and 
+they allow to store the data in a different way.
 
+A hash table is a combination between a hash function with a array.
+
+Colisions are problems that need to me minimized with a good hash function.
+
+Hash tables are incredible fast to insert, find and remove items.
+
+Hash tables are good to allow relationship between two items.
+
+If it's load factor is greather than 0.7 then the hashtable need to be resized.
+
+Hash table are used as a cache data structure in a web server as example.
+
+Hash table are good to looking for duplicates.
+
+Performance
+
+Average case
+    Search O(1)
+    Insert O(1)
+    Remove O(1)
+
+Worst case
+    Search O(N)
+    Insert O(N)
+    Remove O(N)
 """
 import hashlib
 from collections import namedtuple
@@ -20,7 +47,7 @@ class HashTable:
             self._duplicate_array_size()
 
         index = self._calculate_position(key)
-        self._array[index].append(Item(key=key, value=value))
+        self._array[index].add(Item(key=key, value=value))
         self._added_items_amount += 1
 
     def get(self, key):
@@ -42,7 +69,7 @@ class HashTable:
         return self._added_items_amount / self._array_size
 
     def _create_empty_array(self):
-        return [[] for _ in range(self._array_size)]
+        return [set() for _ in range(self._array_size)]
 
     def _duplicate_array_size(self):
         self._array_size *= 2
