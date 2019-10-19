@@ -28,6 +28,11 @@ and resolve each subproblem progressively, in each iterator we solve a next subp
 when the iterator ends we have reached the best solution.
 
 The secret is how the way that you model the problem inside the table.
+
+
+link with a good explanation: 
+
+https://youtu.be/F-wu-wkdv-M
 """
 
 weights = (0, 1, 2, 3, 4)
@@ -54,7 +59,7 @@ def create_matrix(products, weights):
     return matrix
 
 
-def get_item_by_weight(product, weight):
+def product_fits_into_bag(product, weight):
     for name, value in product.items():
         if name == "weight" and value <= weight:
             return product["name"], product["weight"], product["price"]
@@ -66,7 +71,7 @@ def stole_store(products, weights):
 
     for line in range(1, len(products)):
         for column_weight in range(1, len(weights)):
-            name, weight, current_item_price = get_item_by_weight(products[line], column_weight)
+            name, weight, current_item_price = product_fits_into_bag(products[line], column_weight)
             
             previous_item_price = matrix[line - 1][column_weight]
 
