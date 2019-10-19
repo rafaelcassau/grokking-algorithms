@@ -22,15 +22,6 @@ places = [
 times = (0, 0.5, 1, 1.5, 2)
 
 
-def get_time_index_by_time_in_days(time_in_days, times):
-    index = 0
-    for time in times:
-        if time == time_in_days:
-            return index
-        index += 1
-    return None
-
-
 def create_matrix(places, times):
     matrix = []
     for i in places:
@@ -43,6 +34,15 @@ def get_place_can_be_visited_in_time(place, time):
         if key == "time_in_days" and value <= time:
             return (place["name"], place["time_in_days"], place["ranking"])
     return ("default", 0, 0)
+
+
+def get_time_index_by_time_in_days(time_in_days, times):
+    index = 0
+    for time in times:
+        if time == time_in_days:
+            return index
+        index += 1
+    return None
 
 
 def make_travel_itinerary(places, times):
