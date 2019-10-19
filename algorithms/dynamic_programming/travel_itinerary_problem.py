@@ -7,6 +7,11 @@ and you need to organize a list of places to be visited.
 These problem is the same bag problem, but instead of a bag
 you have limited time and instead of radios and notebooks
 there are a list of places you want to visit.
+
+
+good explanation how to discover items inside matrix as from 13:04
+
+https://youtu.be/F-wu-wkdv-M
 """
 
 
