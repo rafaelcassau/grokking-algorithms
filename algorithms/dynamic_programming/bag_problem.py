@@ -62,23 +62,23 @@ def create_matrix(products, weights):
 def product_fits_into_bag(product, weight):
     for name, value in product.items():
         if name == "weight" and value <= weight:
-            return product["name"], product["weight"], product["price"]
+            return (product["name"], product["weight"], product["price"])
     return ("default", 0, 0)
 
 
 def stole_store(products, weights):
     matrix = create_matrix(products, weights)
 
-    for line in range(1, len(products)):
+    for line_product in range(1, len(products)):
         for column_weight in range(1, len(weights)):
-            name, weight, current_item_price = product_fits_into_bag(products[line], column_weight)
+            name, weight, current_item_price = product_fits_into_bag(products[line_product], weights[column_weight])
             
-            previous_item_price = matrix[line - 1][column_weight]
+            previous_item_price = matrix[line_product - 1][column_weight]
 
             remaining_weight = column_weight - weight
-            remaining_price_for_weight = matrix[line - 1][remaining_weight]
+            remaining_price_for_weight = matrix[line_product - 1][remaining_weight]
        
-            matrix[line][column_weight] = max(previous_item_price, (current_item_price + remaining_price_for_weight))
+            matrix[line_product][column_weight] = max(previous_item_price, (current_item_price + remaining_price_for_weight))
 
     return matrix
 
