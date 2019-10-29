@@ -1,7 +1,12 @@
 """
 How similar two strings are?
 
-fish X hish
+This method consist in evaluate the largest common substring
+
+f(ish) X h(ish)
+(fo)rt X (fo)rth
+m(ouse) X h(ouse)
+(o)range X lem(o)n
 """
 
 
