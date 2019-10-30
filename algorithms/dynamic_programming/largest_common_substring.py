@@ -25,14 +25,8 @@ def measure_similarity_between_two_strings(first_word, second_word):
                 matrix[line][column] = matrix[line-1][column-1] + 1
             else:
                 matrix[line][column] = 0
-    
-    largest = 0
-    for line in matrix:
-        for column in line:
-            if column > largest:
-                largest = column
 
-    return largest
+    return max([item for sublist in matrix for item in sublist])
 
 
 assert measure_similarity_between_two_strings("fish", "hish") == 3
