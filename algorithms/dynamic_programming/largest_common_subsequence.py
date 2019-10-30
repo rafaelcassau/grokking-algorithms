@@ -1,14 +1,17 @@
 """
 How similar two strings are?
 
-This method consist in evaluate the largest common substring
+This method consist in evaluate the largest common subsequence,
+it's a little bit difference from the last approach, this method
+is more accurate because it's aggregate others subsequence in the
+same string to find similarities between two words.
 
-fi(sh) X fo(sh)
+
+(f)i(sh) X (f)o(sh)
 f(ish) X h(ish)
 m(ouse) X h(ouse)
-(o)range X lem(o)n
+(o)rang(e) X l(e)m(o)n
 """
-
 
 def fill_table(first_word, second_word):
     matrix = []
@@ -24,12 +27,15 @@ def measure_similarity_between_two_words(first_word, second_word):
             if first_word[line-1] == second_word[column-1]:
                 matrix[line][column] = matrix[line-1][column-1] + 1
             else:
-                matrix[line][column] = 0
+                matrix[line][column] = max(matrix[line-1][column], matrix[line][column-1])
 
     return max([item for sublist in matrix for item in sublist])
 
 
-assert measure_similarity_between_two_words("fish", "fosh") == 2
+assert measure_similarity_between_two_words("fish", "fosh") == 3
 assert measure_similarity_between_two_words("fish", "hish") == 3
 assert measure_similarity_between_two_words("mouse", "house") == 4
-assert measure_similarity_between_two_words("orange", "lemon") == 1
+assert measure_similarity_between_two_words("orange", "lemon") == 2
+
+
+
