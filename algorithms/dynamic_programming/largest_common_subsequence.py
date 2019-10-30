@@ -10,7 +10,7 @@ same string to find similarities between two words.
 (f)i(sh) X (f)o(sh)
 f(ish) X h(ish)
 m(ouse) X h(ouse)
-(o)rang(e) X l(e)m(o)n
+(o)ra(n)ge X lem(o)(n)
 """
 
 def fill_table(first_word, second_word):
