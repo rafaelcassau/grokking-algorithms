@@ -11,6 +11,7 @@ same string to find similarities between two words.
 f(ish) X h(ish)
 m(ouse) X h(ouse)
 (o)ra(n)ge X lem(o)(n)
+b(lue) X c(lue)s
 """
 
 def fill_table(first_word, second_word):
@@ -36,6 +37,7 @@ assert measure_similarity_between_two_words("fish", "fosh") == 3
 assert measure_similarity_between_two_words("fish", "hish") == 3
 assert measure_similarity_between_two_words("mouse", "house") == 4
 assert measure_similarity_between_two_words("orange", "lemon") == 2
+assert measure_similarity_between_two_words("blue", "clues") == 3
 
 
 

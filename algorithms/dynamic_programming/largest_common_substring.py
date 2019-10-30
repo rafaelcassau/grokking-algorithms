@@ -7,6 +7,7 @@ fi(sh) X fo(sh)
 f(ish) X h(ish)
 m(ouse) X h(ouse)
 (o)range X lem(o)n
+b(lue) X c(lue)s
 """
 
 
@@ -33,3 +34,4 @@ assert measure_similarity_between_two_words("fish", "fosh") == 2
 assert measure_similarity_between_two_words("fish", "hish") == 3
 assert measure_similarity_between_two_words("mouse", "house") == 4
 assert measure_similarity_between_two_words("orange", "lemon") == 1
+assert measure_similarity_between_two_words("blue", "clues") == 3 
